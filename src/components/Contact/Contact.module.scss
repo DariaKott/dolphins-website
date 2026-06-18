@@ -1,0 +1,65 @@
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 440px) minmax(0, 1fr);
+  gap: 56px;
+}
+
+.label {
+  margin: 0 0 12px;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.inner h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.inner p:last-child {
+  margin: 20px 0 0;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.form label {
+  display: grid;
+  gap: 8px;
+  color: var(--color-muted);
+  font-weight: 700;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 14px 16px;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.form button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-accent);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .inner h2 {
+    font-size: 32px;
+  }
+}

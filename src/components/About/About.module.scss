@@ -1,0 +1,35 @@
+.inner {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 56px;
+}
+
+.label {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.inner h2 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.15;
+}
+
+.inner p:last-child {
+  max-width: 720px;
+  margin: 20px 0 0;
+  color: var(--color-muted);
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .inner h2 {
+    font-size: 32px;
+  }
+}
