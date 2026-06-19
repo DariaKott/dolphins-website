@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Cormorant, Inter } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.scss";
@@ -12,10 +13,26 @@ export const metadata: Metadata = {
   description: "A structured landing page foundation for a yacht experience.",
 };
 
+const cormorant = Cormorant({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600"],
+  variable: "--font-cormorant",
+  adjustFontFallback: false,
+  fallback: ["Georgia", "serif"],
+});
+
+const inter = Inter({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+});
+
 const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${inter.variable} ${cormorant.variable}`}>
+        {children}
+      </body>
     </html>
   );
 };
