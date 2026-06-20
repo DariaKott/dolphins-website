@@ -12,7 +12,9 @@ export const About = () => {
             <h2 id="leader-title" className={styles.title}>
               РАКОВСКАЯ
               <br />
-              ЮЛИЯ ВЛАДИМИРОВНА
+              <span>ЮЛИЯ</span>
+              <br />
+              ВЛАДИМИРОВНА
             </h2>
             <div className={styles.text}>
               <p>Автор программы, ведущая в контакт со свободными дельфинами.</p>
