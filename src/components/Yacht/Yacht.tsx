@@ -11,10 +11,10 @@ import yacht5 from "@/assets/images/yacht/yacht5.jpg";
 import styles from "./Yacht.module.scss";
 
 const yachtImages = [
-  { src: yacht1.src, alt: "Яхта ATLANTY на воде" },
+  { src: yacht1.src, alt: "Каюта яхты ATLANTY" },
   { src: yacht2.src, alt: "Палуба яхты ATLANTY" },
-  { src: yacht3.src, alt: "Каюта яхты ATLANTY" },
-  { src: yacht4.src, alt: "Пространство яхты ATLANTY" },
+  { src: yacht3.src, alt: "Пространство яхты ATLANTY" },
+  { src: yacht4.src, alt: "Каюта яхты ATLANTY" },
   { src: yacht5.src, alt: "Детали яхты ATLANTY" },
 ];
 
