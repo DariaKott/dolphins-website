@@ -9,8 +9,8 @@ type RootLayoutProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Dolphins Yacht Experience",
-  description: "A structured landing page foundation for a yacht experience.",
+  title: "Путешествие к дельфинам",
+  description: "Морской выезд к свободным дельфинам в лагуне Сатайя.",
 };
 
 const cormorant = Cormorant({

@@ -1,49 +1,82 @@
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
-  border-bottom: 1px solid var(--color-border);
-  background: rgba(247, 247, 243, 0.92);
-  backdrop-filter: blur(12px);
+  z-index: 50;
+  width: 100%;
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  // background: rgba(5, 18, 32, 0.86);
+  // backdrop-filter: blur(14px);
+   background: rgba(19, 51, 83, 0.95);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 72px;
+  min-height: 76px;
   gap: 32px;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: 700;
+  max-width: 180px;
+  color: #ffffff;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  color: var(--color-muted);
-  font-size: 15px;
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.78);
+  font-family: var(--font-body), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+
+  &:hover {
+    color: #ffffff;
+  }
 }
 
 .cta {
   display: inline-flex;
-  min-height: 42px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--color-accent);
-  border-radius: 6px;
-  padding: 0 18px;
-  color: var(--color-accent);
-  font-weight: 700;
+  border: 1px solid var(--color-gold);
+  padding: 0 26px;
+  color: #ffffff;
+  font-family: var(--font-body), sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+
+  &:hover {
+    background: rgba(200, 155, 99, 0.1);
+  }
 }
 
 @media (max-width: 900px) {
   .inner {
-    min-height: 64px;
+    min-height: 68px;
   }
 
   .nav {
@@ -52,8 +85,14 @@
 }
 
 @media (max-width: 480px) {
+  .logo {
+    max-width: 150px;
+    font-size: 20px;
+  }
+
   .cta {
-    min-height: 38px;
-    padding: 0 14px;
+    min-height: 40px;
+    padding: 0 18px;
+    font-size: 11px;
   }
 }
