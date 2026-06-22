@@ -5,6 +5,7 @@ import { Header } from "@/components/Header/Header";
 import { Hero } from "@/components/Hero/Hero";
 import { Location } from "@/components/Location/Location";
 import { Method } from "@/components/Method/Method";
+import { ParticipationCondition } from "@/components/ParticipationCondition/ParticipationCondition";
 import { Pricing } from "@/components/Pricing/Pricing";
 import { Yacht } from "@/components/Yacht/Yacht";
 
@@ -20,6 +21,7 @@ const HomePage = () => {
         <Experience />
         <Yacht />
         <Pricing />
+        <ParticipationCondition />
         <Contact />
       </main>
     </>

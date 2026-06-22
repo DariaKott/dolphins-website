@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
+    "build:github": "GITHUB_PAGES=true NEXT_PUBLIC_SITE_URL=https://dariakott.github.io/dolphins-website next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"

@@ -2,25 +2,30 @@ import styles from "./Contact.module.scss";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="page-section" aria-labelledby="contact-title">
-      <div className={`${styles.inner} container`}>
-        <div>
-          <p className={styles.label}>Contact</p>
-          <h2 id="contact-title">Contact section placeholder</h2>
-          <p>Temporary content for phone, email, social links, or booking request details.</p>
+    <section id="contact" className={styles.contact} aria-labelledby="contact-title">
+      <div className="container">
+        <div className={styles.content}>
+          <p className={styles.eyebrow}>КОНТАКТ</p>
+          <h2 id="contact-title" className={styles.title}>
+            Готовы услышать себя и свое тело иначе?
+          </h2>
+          <p className={styles.text}>
+            Оставьте заявку, чтобы обсудить участие в программе.
+          </p>
+          <div className={styles.actions}>
+            <a className={styles.button} href="https://t.me/" target="_blank" rel="noreferrer">
+              Написать в Telegram
+            </a>
+            <a
+              className={styles.button}
+              href="https://wa.me/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Написать в WhatsApp
+            </a>
+          </div>
         </div>
-
-        <form className={styles.form}>
-          <label>
-            Name
-            <input type="text" name="name" placeholder="Your name" />
-          </label>
-          <label>
-            Message
-            <textarea name="message" placeholder="Trip details" rows={5} />
-          </label>
-          <button type="submit">Send request</button>
-        </form>
       </div>
     </section>
   );

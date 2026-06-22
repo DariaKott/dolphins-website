@@ -4,13 +4,43 @@
   --color-text: #1f2933;
   --color-muted: #64748b;
   --color-border: #d9e2ec;
+
   --color-accent: #0f766e;
-  --container-width: 1180px;
+  --color-gold: #c89b63;
+
+  --overlay-underwater:
+    linear-gradient(
+      180deg,
+      rgba(5, 20, 35, 0.16) 0%,
+      rgba(5, 20, 35, 0.28) 48%,
+      rgba(5, 20, 35, 0.46) 100%
+    );
+
+  --overlay-underwater-left:
+  linear-gradient(
+  90deg,
+  rgba(3, 14, 28, 0.72) 0%,
+  rgba(3, 14, 28, 0.48) 30%,
+  rgba(3, 14, 28, 0.18) 60%,
+  rgba(3, 14, 28, 0.04) 100%
+);
+    // linear-gradient(
+    //   90deg,
+    //   rgba(5, 18, 32, 0.52) 0%,
+    //   rgba(5, 18, 32, 0.32) 32%,
+    //   rgba(5, 18, 32, 0.12) 62%,
+    //   rgba(5, 18, 32, 0.04) 100%
+    // );
+
+  --container-width: 1200px;
   --container-padding: 40px;
+
   --section-spacing: 112px;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -21,13 +51,40 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+
   background: var(--color-page);
   color: var(--color-text);
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-cormorant);
+
+  font-family: var(--font-body), sans-serif;
   line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -41,25 +98,30 @@ textarea {
   font: inherit;
 }
 
+button {
+  border: none;
+}
+
 .page-section {
   padding: var(--section-spacing) 0;
 }
 
 .container {
-  width: min(100% - (var(--container-padding) * 2), var(--container-width));
+  width: 100%;
+  max-width: var(--container-width);
   margin: 0 auto;
+  padding: 0 var(--container-padding);
 }
 
 @media (max-width: 900px) {
   :root {
-    --container-padding: 24px;
     --section-spacing: 80px;
   }
 }
 
 @media (max-width: 600px) {
   :root {
-    --container-padding: 16px;
+    --container-padding: 20px;
     --section-spacing: 56px;
   }
 }
