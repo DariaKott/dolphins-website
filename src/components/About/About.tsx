@@ -1,4 +1,4 @@
-import yuliaPhoto from "@/assets/images/yulia.png";
+import yuliaPhoto from "@/assets/images/yulia1.jpg";
 
 import styles from "./About.module.scss";
 
